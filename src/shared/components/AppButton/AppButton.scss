@@ -1,0 +1,29 @@
+@import "../../style/constants.scss";
+
+.app-button {
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    &.dark {
+        color: $primary_color;
+        background: $dark_color;
+
+        &:hover {
+            color: $dark_color;
+            background: $primary_color;
+        }
+    }
+
+    &.light {
+        color: $dark_color;
+        background: $primary_color;
+
+        &:hover {
+            color: $primary_color;
+            background: $dark_color;
+        }
+    }
+}
