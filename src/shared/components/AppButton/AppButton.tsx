@@ -6,12 +6,13 @@ import type { ButtonType } from "./types";
 interface IProps {
     text: string;
     style: ButtonType;
+    clickHandler: () => void;
 }
 
-const AppButton: FC<IProps> = ({ text, style }) => {
-    return <div className={`app-button ${style}`}>
+const AppButton: FC<IProps> = ({ text, style, clickHandler }) => {
+    return <button className={`app-button ${style}`} onClick={ clickHandler }>
         { text }
-    </div>
+    </button>
 };
 
 export default AppButton;

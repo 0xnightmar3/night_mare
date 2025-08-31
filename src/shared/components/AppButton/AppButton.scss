@@ -1,5 +1,10 @@
 @import "../../style/constants.scss";
 
+button {
+    border: none;
+    appearance: none;
+}
+
 .app-button {
     cursor: pointer;
     border-width: 2px;
