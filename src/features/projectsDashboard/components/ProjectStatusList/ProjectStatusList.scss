@@ -24,13 +24,19 @@
     gap: 2rem;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-items: stretch;
     justify-content: flex-start;
 
     width: 100%;
 
+    & > * {
+        flex: 0.25;
+    }
+
     @media screen and (max-width: 767px) {
+        align-items: center;
         flex-direction: column;
+        justify-content: center;
     }
 
     @media screen and (max-width: 767px) and (orientation: landscape) {

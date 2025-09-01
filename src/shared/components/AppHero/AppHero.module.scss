@@ -1,0 +1,53 @@
+@import "../../style/constants.scss";
+
+.hero {
+  padding: 72px 0 48px;
+  text-align: center;
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.glitch {
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+  font-size: clamp(2rem, 5.2vw, 4rem);
+  background: $cyberpunk_gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(0,255,255,.25);
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0; top: 0;
+  -webkit-text-fill-color: transparent;
+  background: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: .6;
+}
+
+.glitch::before {
+  clip-path: polygon(0 0,100% 0,100% 45%,0 45%);
+  transform: translate(-2px,0);
+}
+
+.glitch::after {
+  clip-path: polygon(0 55%,100% 55%,100% 100%,0 100%);
+  transform: translate(2px,0);
+}
+
+.sub {
+  opacity: .9;
+  max-width: 760px;
+  margin: 8px auto 24px;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: $primary_color;
+}

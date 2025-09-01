@@ -1,0 +1,96 @@
+@import "../../../../shared/style/constants.scss";
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  text-decoration: none;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.card {
+  padding: 14px;
+  border: 1px solid $secondary_color;
+  border-radius: 12px;
+  background: linear-gradient(180deg,#0E1F27,#081118);
+  box-shadow:
+    inset 0 0 14px rgba(0,255,255,.07),
+    0 10px 30px rgba(0,0,0,.35);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  width: 100%;
+  height: 100%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 80%;
+  }
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: $primary_color;
+  box-shadow:
+    inset 0 0 18px rgba(0,255,255,.12),
+    0 12px 36px rgba(0,255,255,.08);
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid $secondary_color;
+  border-radius: 10px;
+  background: rgba(0,255,255,.03);
+  box-shadow: inset 0 0 10px rgba(0,255,255,.06);
+}
+
+.icon {
+  font-size: 1.1rem;
+  max-height: 2rem;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .85rem;
+  opacity: .95;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.on {
+  background: $primary_color;
+  box-shadow:
+    0 0 6px $primary_color,
+    0 0 14px $primary_color;
+}
+
+.off {
+  background: $secondary_color;
+  box-shadow: inset 0 0 6px #022c30;
+}
+
+.label {
+  color: #9adfe0;
+}
+
+.name {
+  margin: 12px 4px 0;
+  font-size: 1.05rem;
+  letter-spacing: .03em;
+  color: #bff;
+  text-transform: uppercase;
+  text-shadow: 0 0 6px rgba(0,255,255,.25);
+}

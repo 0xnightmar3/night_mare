@@ -8,11 +8,11 @@ function App() {
   return (
     <div className='app-container'>
       <CircuitBackground options={{
-        blurPx: 3,
-        opacity: 0.32,
+        blurPx: 2,
+        opacity: 0.3,
         grid: 28,
         chips: 6,
-        pulses: 60,
+        pulses: 80,
         speedMin: 14,
         speedMax: 28,
        }}
