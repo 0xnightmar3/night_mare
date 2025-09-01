@@ -59,7 +59,7 @@ h1, h2, h3 {
 }
 
 .gradient-yellow {
-  background: linear-gradient(90deg, #FCEE09 30%, #00FFFF 100%);
+  background: $cyberpunk_gradient;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -2,28 +2,22 @@
 
 .app-button {
     cursor: pointer;
-    border-width: 2px;
-    border-style: solid;
+    font-weight: 900;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
 
     &.dark {
         color: $primary_color;
         background: $dark_color;
-
-        &:hover {
-            color: $dark_color;
-            background: $primary_color;
-        }
     }
 
     &.light {
         color: $dark_color;
-        background: $primary_color;
+        background: $cyberpunk_gradient;
+    }
 
-        &:hover {
-            color: $primary_color;
-            background: $dark_color;
-        }
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 22px rgba(0, 255, 255, 0.35);
     }
 }
