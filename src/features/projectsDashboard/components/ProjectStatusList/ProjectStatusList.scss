@@ -11,8 +11,12 @@
         width: 100%;
     }
 
-    @media screen and (max-width: 980px) {
+    @media screen and (max-width: 767px) {
         text-align: center;
+    }
+
+    @media screen and (max-width: 767px) and (orientation: landscape) {
+        text-align: start;
     }
 }
 
@@ -25,8 +29,11 @@
 
     width: 100%;
 
-    @media screen and (max-width: 980px) {
-        align-items: center;
+    @media screen and (max-width: 767px) {
         flex-direction: column;
+    }
+
+    @media screen and (max-width: 767px) and (orientation: landscape) {
+        flex-direction: row;
     }
 }
