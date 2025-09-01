@@ -13,6 +13,8 @@ body {
   color: $primary_color;
   background: $darker_color;
   font-family: "Oxanium", system-ui, sans-serif;
+
+  cursor: url("/nightmare-cursor-32.png") 4 4, auto;
 }
 
 // Overrides
