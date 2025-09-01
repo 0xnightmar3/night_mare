@@ -1,4 +1,4 @@
-import type { IProject } from "../../types.ts";
+import type { IProject } from "../../types";
 
 export type IApi = {
     getAllStatuses: () => Promise<IProject[]>;

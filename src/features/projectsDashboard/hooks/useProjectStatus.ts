@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
-import { type IProject } from "../types.ts";
-import { checkProjectStatusList, fetchProjectList } from "../services/projectStatusService.ts";
+import { type IProject } from "../types";
+import { checkProjectStatusList, fetchProjectList } from "../services/projectStatusService";
 
 const useProjectStatus = () => {
   const [isLoading, setIsLoading] = useState(true);

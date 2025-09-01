@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import type { IApi } from "./apiTypes";
-import type { IProject } from "../../types.ts";
+import type { IProject } from "../../types";
 
 const projectList: IProject[] = [
   { url: "api.mealtracker.texhno.lol/health", name: "Meal Tracker", isUp: false, icon: "mealtracker_logo.png", link: "https://mealtracker.texhno.lol" },

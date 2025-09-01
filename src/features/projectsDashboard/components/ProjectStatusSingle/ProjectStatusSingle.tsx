@@ -1,7 +1,7 @@
 import type { FC } from "react";
-import type { IProject } from "../../types.ts";
 
 import "./ProjectStatusSingle.scss";
+import type { IProject } from "../../types";
 
 interface IProps {
     project: IProject;

@@ -1,5 +1,5 @@
-import type { IProject } from "../types.ts";
-import projectService from "../api/projectStatus.ts";
+import type { IProject } from "../types";
+import projectService from "../api/projectStatus";
 
 export const checkProjectStatusList = async (projectList: IProject[]): Promise<IProject[]> => {
     const clonedProjectList = JSON.parse(JSON.stringify(projectList)) as IProject[];

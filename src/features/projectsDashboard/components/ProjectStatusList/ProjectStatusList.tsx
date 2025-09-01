@@ -1,8 +1,8 @@
 import { type FC } from "react";
 
 import "./ProjectStatusList.scss";
-import useProjectStatus from "../../hooks/useProjectStatus.ts";
-import ProjectStatusSingle from "../ProjectStatusSingle/ProjectStatusSingle.tsx";
+import useProjectStatus from "../../hooks/useProjectStatus";
+import ProjectStatusSingle from "../ProjectStatusSingle/ProjectStatusSingle";
 
 const ProjectStatusList: FC = () => {
   const { projectList, isLoading } = useProjectStatus();

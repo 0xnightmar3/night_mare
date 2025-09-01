@@ -1,6 +1,6 @@
 import './App.scss'
-import AppNavigationBar from './navigationBar/components/AppNavigationBar'
-import ProjectStatusList from './projectsDashboard/components/ProjectStatusList/ProjectStatusList'
+import AppNavigationBar from './shared/components/AppNavigationBar/AppNavigationBar'
+import ProjectStatusList from './features/projectsDashboard/components/ProjectStatusList/ProjectStatusList'
 
 function App() {
   return (

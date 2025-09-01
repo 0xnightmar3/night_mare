@@ -1,4 +1,4 @@
-@import "../../../shared/style/constants.scss";
+@import "../../../../shared/style/constants.scss";
 
 a {
     color: $primary_color;
@@ -48,25 +48,6 @@ a {
 }
 
 .status-indicator {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 1px solid transparent;
-
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-
-    &.up {
-        background: $light_color;
-    }
-
-    &.down {
-        background: $dark_color;
-    }
-}
-
-.status-indicator {
   width: 16px;
   margin: 4px;
   height: 16px;
@@ -74,8 +55,12 @@ a {
   display: inline-block;
   transition: all 0.3s ease;
 
+  top: 0.5rem;
+  right: 0.5rem;
+  position: absolute;
+
   &.down {
-    background-color: #045254;           /* deep teal */
+    background-color: $secondary_color;           /* deep teal */
     box-shadow: 0 0 4px #022c30 inset;   /* subtle inner glow */
   }
 
