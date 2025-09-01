@@ -1,3 +1,4 @@
+@import "./shared/style/fonts.scss";
 @import "./shared/style/constants.scss";
 
 *,
@@ -10,5 +11,50 @@
 
 body {
   color: $primary_color;
-  background: $dark_color;
+  background: $darker_color;
+  font-family: "Oxanium", system-ui, sans-serif;
+}
+
+// Overrides
+
+button {
+  border: none;
+  appearance: none;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow:0 0 8px rgba(0,255,255,.35);
+}
+
+// Utilities
+
+.text-small {
+  font-size: 0.5rem;
+}
+
+.superscript {
+  vertical-align: super;
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #00FFFF 0%, #00BFAA 40%, #FF00FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-yellow {
+  background: linear-gradient(90deg, #FCEE09 30%, #00FFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
