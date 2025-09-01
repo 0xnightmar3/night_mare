@@ -1,8 +1,8 @@
 import type { FC } from "react";
 
 import "./AppNavigationBar.scss";
-import AppButton from "../AppButton/AppButton";
-import { ButtonType } from "../AppButton/types";
+import AppButton from "@components/AppButton";
+import { ButtonType } from "@components/AppButton/types";
 
 const AppNavigationBar: FC = () => {
     return <div className="navigation-wrapper">

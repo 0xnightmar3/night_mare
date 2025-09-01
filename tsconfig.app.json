@@ -21,7 +21,15 @@
     "noUnusedParameters": true,
     // "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    "baseUrl": "src",
+    "paths": {
+      "@shared/*": ["shared/*"],
+      "@components/*": ["shared/components/*"],
+      "@css_fonts": ["shared/style/fonts.scss"],
+      "@css_constants": ["shared/style/constants.scss"],
+    }
   },
   "include": ["src"]
 }
