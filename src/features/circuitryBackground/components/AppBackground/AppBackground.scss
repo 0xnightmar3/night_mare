@@ -1,0 +1,13 @@
+#circuits {
+    inset: 0;
+    z-index: -2;
+    position: fixed;
+    filter: blur(2px) saturate(120%);
+}
+
+#vignette {
+    position:fixed;inset:0;z-index:-1;background:
+    radial-gradient(1000px 500px at 50% 20%, rgba(0,255,255,.12), transparent 60%),
+    radial-gradient(700px 400px at 80% 80%, rgba(252,238,9,.12), transparent 60%),
+    radial-gradient(700px 400px at 10% 70%, rgba(0,191,170,.14), transparent 60%);
+}

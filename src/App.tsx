@@ -1,12 +1,27 @@
 import './App.scss'
+import AppFooter from '@shared/components/AppFooter'
 import AppNavigationBar from '@components/AppNavigationBar'
-import ProjectStatusList from './features/projectsDashboard/components/ProjectStatusList/ProjectStatusList'
+import CircuitBackground from "@features/circuitryBackground";
+import ProjectStatusList from '@features/projectsDashboard/components/ProjectStatusList'
 
 function App() {
   return (
     <div className='app-container'>
+      <CircuitBackground options={{
+        blurPx: 3,
+        opacity: 0.32,
+        grid: 28,
+        chips: 6,
+        pulses: 60,
+        speedMin: 14,
+        speedMax: 28,
+       }}
+      />
       <AppNavigationBar />
-      <ProjectStatusList />
+      <div className="content-wrapper">
+        <ProjectStatusList />
+      </div>
+      <AppFooter />
     </div>
   )
 }

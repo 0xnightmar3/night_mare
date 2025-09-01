@@ -47,14 +47,20 @@ h1, h2, h3 {
   white-space: nowrap;
 }
 
+.page {
+  max-width: 1000px;
+}
+
 .gradient {
   background: linear-gradient(90deg, #00FFFF 0%, #00BFAA 40%, #FF00FF 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-yellow {
   background: linear-gradient(90deg, #FCEE09 30%, #00FFFF 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
