@@ -3,7 +3,7 @@ import type { FC } from "react";
 import "./AppButton.scss";
 import type { ButtonType } from "./types";
 
-interface IProps {
+export interface IProps {
     text: string;
     style: ButtonType;
     clickHandler: () => void;
