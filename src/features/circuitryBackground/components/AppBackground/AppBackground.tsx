@@ -1,8 +1,10 @@
 import { useRef, type FC } from "react";
 
 import "./AppBackground.scss";
-import { type CircuitOptions } from "features/circuitryBackground/hooks/useCircuitryAnimation";
-import { useCircuitAnimation } from "@features/circuitryBackground/hooks/useCircuitAnimation";
+import {
+  useCircuitAnimation,
+  type CircuitOptions,
+} from "@features/circuitryBackground/hooks/useCircuitryAnimation";
 
 interface IProps {
   options: CircuitOptions;
