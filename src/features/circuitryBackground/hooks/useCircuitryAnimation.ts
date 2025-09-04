@@ -1,20 +1,23 @@
 import { useEffect, useRef } from "react";
 
 export type CircuitOptions = {
-  blurPx?: number;          // background blur
-  opacity?: number;         // 0..1
-  grid?: number;            // grid spacing
-  chips?: number;           // number of chip pads
-  pulses?: number;          // moving dots
-  traceAlpha?: number;      // base traces alpha
-  cyan?: string;            // rgba color for cyan glow
-  teal?: string;            // rgba color for teal traces
-  yellow?: string;          // rgba color for yellow pulses
-  speedMin?: number;        // px/s
-  speedMax?: number;        // px/s
+  blurPx?: number; // background blur
+  opacity?: number; // 0..1
+  grid?: number; // grid spacing
+  chips?: number; // number of chip pads
+  pulses?: number; // moving dots
+  traceAlpha?: number; // base traces alpha
+  cyan?: string; // rgba color for cyan glow
+  teal?: string; // rgba color for teal traces
+  yellow?: string; // rgba color for yellow pulses
+  speedMin?: number; // px/s
+  speedMax?: number; // px/s
 };
 
-export const useCircuitAnimation = (canvasRef: React.RefObject<HTMLCanvasElement | null>, opts: CircuitOptions) => {
+export const useCircuitAnimation = (
+  canvasRef: React.RefObject<HTMLCanvasElement | null>,
+  opts: CircuitOptions,
+) => {
   const rafRef = useRef<number>(null);
   const tracesRef = useRef<any[]>([]);
   const pulsesRef = useRef<any[]>([]);
@@ -71,13 +74,25 @@ export const useCircuitAnimation = (canvasRef: React.RefObject<HTMLCanvasElement
       for (let r = 2; r < rows - 2; r++) {
         if (Math.random() < 0.25) continue;
         const y = r * grid + (Math.random() * 4 - 2);
-        tracesRef.current.push({ type: "h", y, x0: grid * 2, x1: W - grid * 2, w: 0.8 });
+        tracesRef.current.push({
+          type: "h",
+          y,
+          x0: grid * 2,
+          x1: W - grid * 2,
+          w: 0.8,
+        });
       }
       // vertical
       for (let c = 2; c < cols - 2; c++) {
         if (Math.random() < 0.25) continue;
         const x = c * grid + (Math.random() * 4 - 2);
-        tracesRef.current.push({ type: "v", x, y0: grid * 2, y1: H - grid * 2, w: 0.8 });
+        tracesRef.current.push({
+          type: "v",
+          x,
+          y0: grid * 2,
+          y1: H - grid * 2,
+          w: 0.8,
+        });
       }
       // chip pads
       for (let i = 0; i < chips; i++) {
@@ -89,7 +104,10 @@ export const useCircuitAnimation = (canvasRef: React.RefObject<HTMLCanvasElement
       }
       // pulses
       for (let i = 0; i < pulses; i++) {
-        const seg = tracesRef.current[Math.floor(Math.random() * tracesRef.current.length)];
+        const seg =
+          tracesRef.current[
+            Math.floor(Math.random() * tracesRef.current.length)
+          ];
         if (!seg || seg.type === "rect") {
           i--;
           continue;
@@ -182,4 +200,4 @@ export const useCircuitAnimation = (canvasRef: React.RefObject<HTMLCanvasElement
       window.removeEventListener("resize", onResize);
     };
   }, [canvasRef, opts]);
-}
+};

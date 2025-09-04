@@ -8,11 +8,7 @@ export type HeroProps = {
   className?: string;
 };
 
-const AppHero: React.FC<HeroProps> = ({
-  title,
-  subtitle,
-  className,
-}) => {
+const AppHero: React.FC<HeroProps> = ({ title, subtitle, className }) => {
   return (
     <section className={[styles.hero, className].filter(Boolean).join(" ")}>
       <h1 className={styles.glitch} data-text={title}>
